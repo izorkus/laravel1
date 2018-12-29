@@ -15,7 +15,11 @@ Route::get('/', function () {
 
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/PC', 'PagesController@index');
 
 Route::get('/about', function(){
     return view('pages.about');
